@@ -1,0 +1,31 @@
+﻿<Window x:Class="CriptoValuta.Window1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CriptoValuta"
+        mc:Ignorable="d"
+        Title="Window1" Height="600" Width="800">
+    <Grid>
+        <Grid Width="200"
+              Height="600"
+              VerticalAlignment="Center"
+              HorizontalAlignment="Left"
+              >
+            <StackPanel Orientation="Horizontal"
+                        Background="Aqua"
+                        >
+            </StackPanel>
+
+        </Grid>
+        
+        <Grid Width="600"
+              Height="580"
+              VerticalAlignment="Center"
+              HorizontalAlignment="Right"
+              Background="Azure"
+              >
+            
+        </Grid>
+    </Grid>
+</Window>
