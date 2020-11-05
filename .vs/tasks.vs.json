@@ -1,0 +1,15 @@
+{
+  "version": "0.2.1",
+  "tasks": [
+    {
+      "taskLabel": "задача-CriptoValuta",
+      "appliesTo": "/",
+      "type": "launch"
+    },
+    {
+      "taskLabel": "задача-AddClass",
+      "appliesTo": "AddClass/",
+      "type": "launch"
+    }
+  ]
+}

@@ -5,73 +5,74 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CriptoValuta"
         mc:Ignorable="d"
-        Title="Window1" Height="600" Width="800">
+        Title="Window1" Height="600" Width="800"
+        Background="Aqua">
     <Grid>
 
         <Grid Width="200"
-              Height="600"
+              Height="529"
               VerticalAlignment="Center"
-              HorizontalAlignment="Left"
-              >
-            <StackPanel Orientation="Vertical"
-                        Background="Aqua"
-                        >
-                <Button x:Name = "Profile"
-                        VerticalAlignment="Center"
-                        HorizontalAlignment="Center"
-                        Width="150"
-                        Height="50"
-                        Margin="0,180,0,0"
-                        Background="Transparent"
-                        BorderBrush="Transparent"
-                        >
-                    <Image Source="Image/Profile.png" Stretch="Uniform">
+              HorizontalAlignment="Left" Margin="0,40,0,0"
+              />
 
-                    </Image>
+        <TabControl x:Name="products" Margin="0,40,0,0" TabStripPlacement="Left" Background="Yellow">
+            <TabItem x:Name="profile" Background="Green" >
+                <TabItem.Header>
+                    <StackPanel Orientation="Vertical">
+                        <Image Source="Image/Profile.png" Stretch="Uniform" Width="50" Height="50" ></Image>
+                    </StackPanel>
+                </TabItem.Header>
+                <TabItem.Content>
+                    <StackPanel>
+                        <RadioButton IsChecked="True">iPhone S6</RadioButton>
+                        <RadioButton>LG G 4</RadioButton>
+                        <RadioButton>Lumia 550</RadioButton>
+                    </StackPanel>
+                </TabItem.Content>
+            </TabItem>
+            <TabItem x:Name="balance">
+                <TabItem.Header>
+                    <StackPanel Orientation="Vertical" Width="200" Height="50">
+                        <Image Source="Image/Coin.png" Stretch="Uniform" Width="50" Height="50"></Image>
+                    </StackPanel>
+                </TabItem.Header>
+                <TabItem.Content>
+                    <StackPanel>
+                        <RadioButton>iPhone S6</RadioButton>
+                        <RadioButton IsChecked="True">LG G 4</RadioButton>
+                        <RadioButton>Lumia 550</RadioButton>
+                    </StackPanel>
+                </TabItem.Content>
+            </TabItem>
+            <TabItem x:Name="settings">
+                <TabItem.Header>
+                    <StackPanel Orientation="Vertical" Width="200">
+                        <TextBlock Margin="0" Height="50" HorizontalAlignment="Center">Настройки</TextBlock>
+                    </StackPanel>
+                </TabItem.Header>
+                <TabItem.Content>
+                    <StackPanel>
+                        <RadioButton >iPhone S6</RadioButton>
+                        <RadioButton>LG G 4</RadioButton>
+                        <RadioButton IsChecked="True">Lumia 550</RadioButton>
+                    </StackPanel>
+                </TabItem.Content>
+            </TabItem>
 
-                </Button>
+        </TabControl>
 
-                <Button x:Name = "Balance"                        
-                        Width="150"
-                        Height="50"
-                        Margin="0,20,0,0"
-                        Background="Transparent"
-                        BorderBrush="Transparent">
-                    <Image Source="Image/Coin.png" Stretch="Uniform">
-
-                    </Image>
-
-                </Button>
-                <Button x:Name = "Settings"                        
-                        Width="150"
-                        Height="50"
-                        Margin="0,20,0,0"
-                        Background="Transparent"
-                        BorderBrush="Transparent"
-                        >
-
-                </Button>
-            </StackPanel>
-
-        </Grid>
-
-        <Grid Width="600"
-              Height="580"
-              VerticalAlignment="Center"
-              HorizontalAlignment="Right"
-              Background="Azure"
-              >
-
-        </Grid>
         <Grid x:Name="Hedder"
                   VerticalAlignment="Top"
                   Background="BlueViolet"
-                  Width="800"
                   Height="40">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="0*"/>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
         </Grid>
+
+
+
+
     </Grid>
 </Window>

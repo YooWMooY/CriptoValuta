@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\Alexander\Source\Repos\YooWMooY\CriptoValuta\obj\Debug\
+C:\Users\Alexander\Source\Repos\YooWMooY\CriptoValuta\obj\Release\
 CriptoValuta
 none
 false
-DEBUG;TRACE
+TRACE
 C:\Users\Alexander\Source\Repos\YooWMooY\CriptoValuta\App.xaml
 21411788386
 
-9-577573351
+81010728367
 15858374951
 MainWindow.xaml;WorkWindow.xaml;
 
-False
+True
 

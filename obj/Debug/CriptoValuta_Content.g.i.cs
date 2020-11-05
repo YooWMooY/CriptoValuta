@@ -8,6 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("image/exit_button1.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("image/exit_button.png")]
 
 
