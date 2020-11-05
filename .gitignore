@@ -3,3 +3,6 @@
 obj/Debug/CriptoValuta.csprojAssemblyReference.cache
 obj/Debug/CriptoValuta_MarkupCompile.i.cache
 obj/Debug/CriptoValuta_MarkupCompile.i.lref
+*.suo
+*.user
+*.sln.docstates
