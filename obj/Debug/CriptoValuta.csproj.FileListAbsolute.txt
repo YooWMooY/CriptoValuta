@@ -19,3 +19,5 @@ C:\CriptoValuta\CriptoValuta\obj\Debug\CriptoValuta.csproj.CoreCompileInputs.cac
 C:\CriptoValuta\CriptoValuta\obj\Debug\CriptoValuta.csproj.CopyComplete
 C:\CriptoValuta\CriptoValuta\obj\Debug\CriptoValuta.exe
 C:\CriptoValuta\CriptoValuta\obj\Debug\CriptoValuta.pdb
+C:\CriptoValuta\CriptoValuta\obj\Debug\WorkWindow.g.cs
+C:\CriptoValuta\CriptoValuta\obj\Debug\WorkWindow.baml
