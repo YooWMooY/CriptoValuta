@@ -44,7 +44,7 @@ namespace CriptoValuta.Classes
             
             if (success)
             {
-                Window1 win1 = new Window1();
+                Window1 win1 = new Window1(login);
                 win1.Show();
                 return true;
             }
