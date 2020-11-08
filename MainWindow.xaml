@@ -12,22 +12,16 @@
         WindowStartupLocation="CenterScreen"
         WindowStyle="None"
         AllowsTransparency="True"
-        Background="Transparent">
+        Background="Transparent"
+        
+    >
 
     <Grid>
-        <TextBox x:Name="Proverka1"
-                 VerticalAlignment="Top"
-                 Margin="0,60,0,0"
-                 >
-
-        </TextBox>
-        <TextBox x:Name="Proverka2"
-                 VerticalAlignment="Top"
-                 Margin="0,80,0,0"
-                 >
-
-        </TextBox>
         <Grid Margin="10" Background="AliceBlue">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="59*"/>
+                <RowDefinition Height="321*"/>
+            </Grid.RowDefinitions>
             <Button Width="50"
                         Height="30"
                         VerticalAlignment="Bottom"
@@ -35,7 +29,7 @@
                     Margin="100,0,0,30"
                     Content="Login"
                     FontFamily="Work Sans" 
-                    Click="Login_Click"
+                    Click="Login_Click" Grid.Row="1"
                     >
 
             </Button>
@@ -47,13 +41,13 @@
                     Margin="0,0,100,30"
                     Content="Register"
                     FontFamily="Work Sans" 
-                    Click="Register_Click">
+                    Click="Register_Click" Grid.Row="1">
 
             </Button>
             <Grid Height="150"
                   Width="280"
                   Background="	#BCD2EE"
-                  Margin="0,50,0,0">
+                  Margin="50,81.225,50,90" Grid.Row="1">
                 <TextBox x:Name="UserName"                 
                          Style="{DynamicResource TextBoxStyle1}"
                          Width="250"
@@ -62,7 +56,7 @@
                          HorizontalAlignment="Center"
                          Margin="0,30,0,0"
                          Text="UserName"
-                         Foreground="White"
+                         Foreground="Black"
                          Background="Transparent"
                          FontSize="20"
                          BorderThickness="1"
@@ -79,7 +73,7 @@
                              Background="Transparent"
                              BorderThickness="1"
                              Password="Password"
-                             Foreground="White"
+                             Foreground="Black"
                              FontSize="20"
                              FontWeight="Light">
                 </PasswordBox>
@@ -90,6 +84,13 @@
                   Background="	#63B8FF">
 
 
+                <Label 
+                    Content="Клиент для работы с криптой"
+                    FontSize="16pt"
+                    >
+                    
+                </Label>
+                
                 <Button x:Name="Exit"
                     Width="20"
                     Height="20"

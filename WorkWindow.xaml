@@ -5,73 +5,109 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CriptoValuta"
         mc:Ignorable="d"
-        Title="Window1" Height="600" Width="800">
+        Title="Личный кабинет пользователя " Height="600" Width="800"
+        Background="Aqua">
+
+    <Window.Resources>
+        <Style TargetType="{x:Type TabItem}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type TabItem}">
+                        <Border 
+                                Name="Border"
+                                Margin="0,0,-4,0" 
+                                Background="White"
+                                BorderBrush="Green" 
+                                BorderThickness="1,1,1,1">
+                            <ContentPresenter x:Name="ContentSite"
+                                    VerticalAlignment="Center"
+                                    HorizontalAlignment="Center"
+                                    ContentSource="Header"
+                                    Margin="12,2,12,2"
+                                    RecognizesAccessKey="True"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsSelected" Value="True">
+                                <Setter Property="Panel.ZIndex" Value="100" />
+                                <Setter TargetName="Border" Property="Background" Value="Green" />
+                                <Setter TargetName="Border" Property="BorderThickness" Value="1,1,1,0" />
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+
+
+
+
     <Grid>
 
         <Grid Width="200"
-              Height="600"
+              Height="529"
               VerticalAlignment="Center"
-              HorizontalAlignment="Left"
-              >
-            <StackPanel Orientation="Vertical"
-                        Background="Aqua"
-                        >
-                <Button x:Name = "Profile"
-                        VerticalAlignment="Center"
-                        HorizontalAlignment="Center"
-                        Width="150"
-                        Height="50"
-                        Margin="0,180,0,0"
-                        Background="Transparent"
-                        BorderBrush="Transparent"
-                        >
-                    <Image Source="Image/Profile.png" Stretch="Uniform">
+              HorizontalAlignment="Left" Margin="0,40,0,0"
+              />
 
-                    </Image>
+        <TabControl  x:Name="information" Margin="0,40,0,0" TabStripPlacement="Left" Background="Yellow">
+            <TabItem x:Name="profile" Margin="-3,-2,0,2" Height="100" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="199">
+                <TabItem.Header>
+                    <StackPanel Orientation="Vertical">
+                        <Image Source="Image/Profile.png" Stretch="Uniform" Width="50" ></Image>
+                    </StackPanel>
+                </TabItem.Header>
+                <TabItem.Content>
+                    <StackPanel Margin="10,0,0,0">
+                        <RadioButton x:Name="rb1" IsChecked="True">Логин</RadioButton>
+                        <RadioButton>Имя кошелька</RadioButton>
+                        <RadioButton>Выход</RadioButton>
+                    </StackPanel>
+                </TabItem.Content>
+            </TabItem>
+            <TabItem x:Name="balance" Margin="-3,-3,0,3" HorizontalAlignment="Left" Width="199" Height="100" VerticalAlignment="Bottom">
+                <TabItem.Header>
+                    <StackPanel Orientation="Vertical">
+                        <Image Source="Image/Coin.png" Stretch="Uniform" Width="50"></Image>
+                    </StackPanel>
+                </TabItem.Header>
+                <TabItem.Content>
+                    <StackPanel>
+                        <RadioButton>Баланс</RadioButton>
+                        <RadioButton IsChecked="True">Баланс</RadioButton>
+                        <RadioButton>Баланс</RadioButton>
+                    </StackPanel>
+                </TabItem.Content>
+            </TabItem>
+            <TabItem x:Name="settings" Margin="-3,-4,0,4" HorizontalAlignment="Left" Width="199" Height="100" VerticalAlignment="Bottom">
+                <TabItem.Header>
+                    <StackPanel>
+                        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center">Настройки</TextBlock>
+                    </StackPanel>
+                </TabItem.Header>
+                <TabItem.Content>
+                    <StackPanel>
+                        <RadioButton >Настройки</RadioButton>
+                        <RadioButton>Настройки</RadioButton>
+                        <RadioButton IsChecked="True">Настройки</RadioButton>
+                    </StackPanel>
+                </TabItem.Content>
+            </TabItem>
 
-                </Button>
+        </TabControl>
 
-                <Button x:Name = "Balance"                        
-                        Width="150"
-                        Height="50"
-                        Margin="0,20,0,0"
-                        Background="Transparent"
-                        BorderBrush="Transparent">
-                    <Image Source="Image/Coin.png" Stretch="Uniform">
-
-                    </Image>
-
-                </Button>
-                <Button x:Name = "Settings"                        
-                        Width="150"
-                        Height="50"
-                        Margin="0,20,0,0"
-                        Background="Transparent"
-                        BorderBrush="Transparent"
-                        >
-
-                </Button>
-            </StackPanel>
-
-        </Grid>
-
-        <Grid Width="600"
-              Height="580"
-              VerticalAlignment="Center"
-              HorizontalAlignment="Right"
-              Background="Azure"
-              >
-
-        </Grid>
         <Grid x:Name="Hedder"
                   VerticalAlignment="Top"
                   Background="BlueViolet"
-                  Width="800"
                   Height="40">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="0*"/>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
         </Grid>
+
+
+
+
     </Grid>
 </Window>
